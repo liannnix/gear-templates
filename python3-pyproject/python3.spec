@@ -42,6 +42,8 @@ $description
 %prep
 %setup -n %pypi_name-%version
 #%%patch -p1
+# hack for setuptools_scm
+#%%pyproject_scm_init
 %pyproject_deps_resync_build
 %pyproject_deps_resync_metadata
 
