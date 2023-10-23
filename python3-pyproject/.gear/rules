@@ -1,0 +1,3 @@
+tar: v@version@:. name=bidict-@version@ base=bidict-@version@
+diff: v@version@:. altlinux-@version@:. name=bidict-@version@-alt.patch
+copy: pyproject_deps.json
