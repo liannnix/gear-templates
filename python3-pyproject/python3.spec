@@ -59,6 +59,10 @@ $description
 #%%pyproject_scm_init
 %pyproject_deps_resync_build
 %pyproject_deps_resync_metadata
+# tox testing deps hack
+#%%if_with check
+#%%pyproject_deps_resync_check_tox tox.ini testenv
+#%%endif
 
 %build
 %pyproject_build
