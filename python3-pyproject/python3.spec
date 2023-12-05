@@ -41,6 +41,16 @@ Source: %pypi_name-%version.tar
 %description
 $description
 
+#%package docs
+#Summary: Documentation for %pypi_name
+#Group: Development/Documentation
+#BuildArch: noarch
+#
+#%description docs
+#$description
+#
+#This package contains documentation for %pypi_name.
+
 %prep
 %setup -n %pypi_name-%version
 #%%patch -p1
@@ -68,6 +78,10 @@ $description
 %python3_sitelibdir/%pypi_name/
 #%%python3_sitelibdir/%mod_name/
 %python3_sitelibdir/%{pyproject_distinfo %pypi_name}
+
+#%%files docs
+#%%doc docs/_build/html/*
+#%%doc examples
 
 %changelog
 $stamp-alt1
