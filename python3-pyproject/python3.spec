@@ -15,6 +15,8 @@ URL:     $url
 #VCS:     $url
 
 BuildRequires(pre): rpm-build-pyproject
+# Sphinx documentation
+#BuildRequires: python3-module-sphinx
 
 %pyproject_runtimedeps_metadata
 %pyproject_builddeps_build
@@ -49,6 +51,9 @@ $description
 
 %build
 %pyproject_build
+
+# Sphinx documentation
+#%%make -C docs html SPHINXBUILD=sphinx-build-3
 
 %install
 %pyproject_install
