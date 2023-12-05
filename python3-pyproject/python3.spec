@@ -22,7 +22,8 @@ BuildRequires(pre): rpm-build-pyproject
 %pyproject_builddeps_build
 
 %if_with check
-%pyproject_builddeps_metadata_extra test
+%pyproject_builddeps_metadata
+#%%pyproject_builddeps_metadata_extra test
 %pyproject_builddeps_check
 %endif
 
